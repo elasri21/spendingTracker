@@ -1,0 +1,232 @@
+:root {
+    --main-white: #f5f5f5;
+    --main-dark: #333;
+    --main-green: #317b22;
+    --main-red: #b80c09;
+    --main-blue: #05668b;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #eee;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container {
+    padding: 30px 50px;
+}
+.container .content .budget-error,
+.container .content .expense-error {
+    padding: 0 0 10px 0;
+    color: var(--main-red);
+    font-size: 14px;
+    text-transform: capitalize;
+    width: fit-content;
+}
+.container h1 {
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: normal;
+    color: var(--main-dark);
+    margin-bottom: 20px;
+}
+.container .box {
+    padding: 25px 15px;
+    border-radius: 3px;
+    border: 2px solid;
+}
+.container .content .budget .box {
+    border-color: var(--main-green);
+}
+.container .content .budget .box input {
+    border-color: var(--main-green);
+}
+.container .content .expense-container .box {
+    border-color: var(--main-red);
+}
+.container .content .expense-container .box input {
+    border-color: var(--main-red);
+}
+.container .box .title {
+    font-size: 20px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    color: var(--main-dark);
+}
+.container .box input {
+    background: none;
+    outline: none;
+    border: 1px solid;
+    display: block;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    border-radius: 3px;
+}
+.container .box input[type="text"] {
+    background-color: var(--main-white);
+    width: 100%;
+}
+.container .box input[type="submit"] {
+    cursor: pointer;
+    width: fit-content;
+    font-size: 15px;
+    letter-spacing: 1px;
+    transition: .3s;
+}
+.container .content .budget .box input[type="submit"]:hover {
+    color: var(--main-green);
+}
+.container .content .expense-container .box input[type="submit"]:hover {
+    color: var(--main-red);
+}
+
+/* budget rules */
+/* .container .content .budget {
+    margin-bottom: 30px;
+} */
+@media (min-width: 1000px) {
+    .container .content .budget {
+        display: flex;
+        gap: 30px;
+        align-items: flex-start;
+    }
+    .container .content .budget > div {
+        width: calc(50% - 15px);
+    }
+}
+/* budget rules */
+
+/* info rules */
+.container .content .budget .info {
+    padding: 25px 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); */
+    gap: 30px;
+}
+.container .content .budget .info h3 {
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-bottom: 25px;
+    color: var(--main-dark);
+}
+.container .content .budget .info i {
+    font-size: 60px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    margin-bottom: 30px;
+    color: var(--main-blue);
+}
+.container .content .budget .info .amount {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.container .content .budget .info .amount span {
+    font-size: 20px;
+    font-weight: 600;
+}
+.container .content .budget .info .amount.total-budget span {
+    color: var(--main-green);
+}
+.container .content .budget .info .amount.expences {
+    color: var(--main-red);
+}
+.container .content .budget .info .amount.balance {
+    color: var(--main-dark);
+}
+/* info rules */
+
+/* expense-container */
+@media (min-width: 1000px) {
+    .container .content .expense-container {
+        display: flex;
+        align-items: flex-start;
+        gap: 30px;
+    }
+    .container .content .expense-container > div {
+        width: calc(50% - 15px);
+    }
+    .container .content .expense-container .form-container {
+        margin-bottom: 0 !important;
+    }
+}
+.container .content .expense-container .form-container {
+    margin-bottom: 30px;
+}
+.container .content .expense-container .info .all-titles,
+.container .content .expense-container .info .all-values {
+    display: flex;
+    justify-content: space-between;
+}
+.container .content .expense-container .info .all-values {
+    margin-bottom: 20px;
+}
+.container .content .expense-container .info .all-values p:last-of-type {
+    position: relative;
+}
+.container .content .expense-container .info .all-values p:last-of-type::after {
+    content: "$";
+    position: absolute;
+    left: -10px;
+}
+@media (max-width: 767px) {
+    .container .content .expense-container .info h3 {
+        font-size: 14px !important;
+    }
+}
+.container .content .expense-container .info h3 {
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-bottom: 25px;
+    color: var(--main-dark);
+}
+.container .content .expense-container .info p {
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-bottom: 25px;
+    color: var(--main-red);
+}
+.container .content .expense-container .info  button {
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    margin-right: 10px;
+}
+.container .content .expense-container .info button i {
+    color: #b80c09;
+    font-size: 20px;
+}
+/* expense-container */
+
+
+/* classes added with js */
+.hide {
+    /* display: none; */
+    opacity: 0;
+}
+.red {
+    color: var(--main-red) !important;
+}
+.green {
+    color: var(--main-green) !important;
+}
+.black {
+    color: var(--main-dark) !important;
+}

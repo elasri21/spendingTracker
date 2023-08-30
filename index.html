@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget app</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="main-title">budget app</h1>
+        <div class="content">
+            <div class="budget-error hide">Value cat not be empty or negative</div>
+            <div class="budget">
+                <div class=" box budget-container">
+                    <h2 class="title">please enter your budget</h2>
+                    <form action="" class="budget-form">
+                        <input class="field budget-input" type="text">
+                        <input class="btn btn-budget" type="submit" value="calculate">
+                    </form>
+                </div>
+                <div class="info">
+                    <div class="amount-box">
+                        <h3>budget</h3>
+                        <i class="fa-solid fa-money-bill"></i>
+                        <div class="amount total-budget">
+                            <span class="dollar-sign">$</span>
+                            <span class="amount-number">0</span>
+                        </div>
+                    </div>
+                    <div class="amount-box">
+                        <h3>expenses</h3>
+                        <i class="fa-solid fa-money-check"></i>
+                        <div class="amount expences expenses">
+                            <span class="dollar-sign">$</span>
+                            <span class="amount-number">0</span>
+                        </div>
+                    </div>
+                    <div class="amount-box">
+                        <h3>balance</h3>
+                        <i class="fa-solid fa-dollar-sign"></i>
+                        <div class="amount balance">
+                            <span class="dollar-sign">$</span>
+                            <span class="amount-number">0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="expense-error hide">Please enter a valid value</p>
+            <div class="expense-container">
+                <div class="form-container box">
+                    <form action="" class="expense-form">
+                        <h3 class="title">please enter your expense</h3>
+                        <input class="expense-name" name="name" type="text">
+                        <h2 class="title">please enter expense amount</h2>
+                        <input class="field expense-input" type="text">
+                        <input class="btn btn-expense" type="submit" value="add expense">
+                    </form>
+                </div>
+                <div class="info">
+                    <div class="all-titles">
+                        <h3>expense title</h3>
+                        <h3 class="">expense value</h3>
+                        <h3>edit or remove</h3>
+                    </div>
+                    <!-- <div class="all-values">
+                        <p>task name</p>
+                        <p class="">amount spent</p>
+                        <div class="buttons">
+                            <button class="edit-exense">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </button>
+                            <button class="remove-expense">
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
